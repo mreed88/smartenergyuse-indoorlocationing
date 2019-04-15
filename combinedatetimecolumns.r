@@ -10,7 +10,3 @@ yourdataframe$Date <- as.Date(HHPC$Date, "%d/%m/%Y")
 str(yourdataframe)
 #You might also use some of the functionality from DPLYR and TIDYR to perform the same task. Select (), Unite() and Mutate() are a few (of many) functions that might be helpful to you in performing this step.#
 #Now that you have converted the date and time appropriately you can begin to obtain some information from the data set.
-#Produce descriptive statistics for the data
-#Using the summary() command calculate the mean, mode, standard deviation, quartiles & characterization of the distribution and maybe more.
-#Research basic statistics available in R and calculate others that may yield additional insights.
-#While you can use the basic summary function from R to perform the following steps, you may also find the Summarise() and groupby() functions of DPLYR helpful to you as well; it would be helpful for you to try both so you can see the difference between the two methods.#

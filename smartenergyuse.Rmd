@@ -1,0 +1,43 @@
+---
+title: "smartenergyuse"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r}
+#Since the Date and Time columns are separate they will need to be combined within the dataset in order to convert them to the correct format to complete the appropriate analysis. Here is an example of how this can be done in R:#
+#Creating one date+time column called DateTime (replace 'household_power_consumption' with the name of your data frame):#
+household_power_consumption <-cbind(household_power_consumption,paste(household_power_consumption$Date,household_power_consumption$Time), stringsAsFactors=FALSE)
+colnames(household_power_consumption)[10] <-"DateTime"
+household_power_consumption <- household_power_consumption[,c(ncol(household_power_consumption), 1:(ncol(household_power_consumption)-1))]
+head(household_power_consumption)
+#Converting date and Time format (replace 'household_power_consumption' with the name of your data frame):#
+household_power_consumption$DateTime <- strptime(household_power_consumption$DateTime, "%d/%m/%Y %H:%M:%S")
+household_power_consumption$Date <- as.Date(HHPC$Date, "%d/%m/%Y")
+#Error in as.Date(HHPC$Date, "%d/%m/%Y") : object 'HHPC' not found
+str(household_power_consumption)
+#You might also use some of the functionality from DPLYR and TIDYR to perform the same task. Select (), Unite() and Mutate() are a few (of many) functions that might be helpful to you in performing this step.#
+#Now that you have converted the date and time appropriately you can begin to obtain some information from the data set.
+```
+```{r}
+summary(household_power_consumption)
+```
+
+```{r}
+library(dplyr)
+summarise(household_power_consumption)
+groupby()
+
+```
+
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
