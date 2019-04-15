@@ -6,3 +6,5 @@ An Internet of Things technology start-up that wants to use Data Analytics to so
 Smart energy usage: Modeling patterns of energy usage by time of day and day of the year in a typical residence whose electrical system is monitored by multiple sub-meters.
 Indoor locationing: Determining a person’s physical position in a multi-building indoor space using wifi fingerprinting
 Use the R statistical programming language to perform visualizations, then to generate descriptive statistics and predictive models using time series regression techniques and statistical classifiers. Finally, present the results to the start-up’s management, explaining strengths and weaknesses of the approaches that were implemented and making suggestions for further improvement.
+
+They have provided me with a very large data set that contains 47 months of energy usage data from these devices so we can analyze the data to see if we can obtain enough insight from this data to provide economic incentive recommendations to homeowners. The company and its customers need to understand if the benefit of installing sub-metering devices is likely to be sufficient to justify its cost.
