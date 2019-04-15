@@ -55,3 +55,4 @@ groupby()
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
 #begin by exploring some visualizations of the data and then to build predictive models that will demonstrate to our client how the data can be used to help a home owner to make decisions about altering power consumption. To provide immediate value, I'd also like you to provide the client with five business suggestions based on insights that you glean from your analysis.
 
+#Visualize and Analyze Energy Data#
